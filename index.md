@@ -12,7 +12,7 @@
 
 Linkit viikkotehtäviin:
 
-- [Viikko 1 tehtävä](vko1.md)
+- [Viikko 1 tehtävä](vko1.html)
   
 - [Viikko 2 tehtävä](vko2.md)
   
