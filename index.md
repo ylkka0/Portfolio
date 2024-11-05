@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     GitHub Pages Sivuni
