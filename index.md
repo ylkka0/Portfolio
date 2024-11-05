@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GitHub Pages Sivuni</title>
+    GitHub Pages Sivuni
 </head>
 <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
