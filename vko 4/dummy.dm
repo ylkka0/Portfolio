@@ -1,1 +1,0 @@
-Kansion luonti
