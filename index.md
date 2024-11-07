@@ -14,7 +14,7 @@
 <ul>
   <li><a href="vko1.md">Viikko 1 tehtävä</a></li>
   <li><a href="vko2.md">Viikko 2 tehtävä</a></li>
-  <li><a href="vko3.md">Viikko 3 tehtävä</a></li>
+  <li><a href="vko3">Viikko 3 tehtävä</a></li>
 </ul>
 
 </body>
