@@ -18,6 +18,7 @@
   <li>Viikko 4 tehtävä</li>
   <li>Viikko 5 tehtävä</li>
   <li>Viikko 6 tehtävä</li>
+  <li>Harjoitustehtävä</li>
 </ul>
 
 </body>
