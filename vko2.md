@@ -21,9 +21,9 @@ ________________________________________________________________________________
 
 CI/CD-putkisto (Continuous Integration/Continuous Deployment) on työnkulku, jossa koodimuutokset integroidaan, testataan ja julkaistaan automaattisesti. 
 
-[b]Työkaluja[/b]: GitHub Actions, Jenkins, GitLab CI/CD, joilla automatisoidaan koodimuutokset, sekä Docker sovelluspakettien luomiseen ja ympäristön hallintaan.
+Työkaluja: GitHub Actions, Jenkins, GitLab CI/CD, joilla automatisoidaan koodimuutokset, sekä Docker sovelluspakettien luomiseen ja ympäristön hallintaan.
 
-[b]Tekniikoita[/b]: 
+Tekniikoita: 
 1> Automatisoitu testaus: Ensin suoritetaan testit jokaisesta koodimuutoksesta.
 2> Rakentaminen: Käännetään ja paketoidaan sovellus julkaisuvalmiiksi.
 3> Automaattinen julkaisu: Päivitetään valmiit versiot tuotantoympäristöön tai palvelimelle.</p>
