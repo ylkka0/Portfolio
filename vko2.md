@@ -1,4 +1,11 @@
-GitHub Actions työkalulla automatisoidaan mm. web-sivujen rakennuksen ja muun ylläpidon työnkulkuja. Jekyll sivuston automatisointi tapahtuu sen avulla, jolloin sivu päivittyy automaattisesti, kun projektissa tapahtuu muutoksia.
+<html>
+<head>
+    <title>GitHub Pages Sivuni</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>GitHub actions ym.</h1>
+    <p class="container">GitHub Actions työkalulla automatisoidaan mm. web-sivujen rakennuksen ja muun ylläpidon työnkulkuja. Jekyll sivuston automatisointi tapahtuu sen avulla, jolloin sivu päivittyy automaattisesti, kun projektissa tapahtuu muutoksia.
 
 Vaiheet TL;DR:
 
@@ -17,8 +24,9 @@ CI/CD-putkisto (Continuous Integration/Continuous Deployment) on työnkulku, jos
 [b]Tekniikoita[/b]: 
 1> Automatisoitu testaus: Ensin suoritetaan testit jokaisesta koodimuutoksesta.
 2> Rakentaminen: Käännetään ja paketoidaan sovellus julkaisuvalmiiksi.
-3> Automaattinen julkaisu: Päivitetään valmiit versiot tuotantoympäristöön tai palvelimelle.
-
+3> Automaattinen julkaisu: Päivitetään valmiit versiot tuotantoympäristöön tai palvelimelle.</p>
+</body>
+</html>
 
 
 
