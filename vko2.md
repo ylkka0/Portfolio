@@ -5,7 +5,9 @@
 </head>
 <body>
     <h1>GitHub actions ym.</h1>
-    <p class="container">GitHub Actions työkalulla automatisoidaan mm. web-sivujen rakennuksen ja muun ylläpidon työnkulkuja. Jekyll sivuston automatisointi tapahtuu sen avulla, jolloin sivu päivittyy automaattisesti, kun projektissa tapahtuu muutoksia.
+    <p class="container"> 
+GitHub Actions työkalulla automatisoidaan mm. web-sivujen rakennuksen ja muun ylläpidon työnkulkuja. 
+Jekyll sivuston automatisointi tapahtuu sen avulla, jolloin sivu päivittyy automaattisesti, kun projektissa tapahtuu muutoksia.
 
 Vaiheet TL;DR:
 
