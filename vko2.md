@@ -17,7 +17,7 @@ Ladataan koodi, asennetaan Ruby ja tarvittavat lisäosat
 Luodaan Jekyll sivusto
 peaceiris/actions-gh-pages -toiminto lataa tulokset Pages -sivustolle
 
-_____________________________________________________________________________________
+
 
 CI/CD-putkisto (Continuous Integration/Continuous Deployment) on työnkulku, jossa koodimuutokset integroidaan, testataan ja julkaistaan automaattisesti. 
 
