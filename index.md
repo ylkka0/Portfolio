@@ -17,7 +17,7 @@
   <li><a href="vko3">Viikko 3 tehtävä</a></li>
   <li><a href="vko4">Viikko 4 tehtävä</a></li>
   <li><a href="vko5">Viikko 5 tehtävä</a></li>
-  <li>Viikko 6 tehtävä</li>
+  <li><a href="vko6">Viikko 6 tehtävä</a></li>
   <li>Harjoitustehtävä</li>
 </ul>
 
