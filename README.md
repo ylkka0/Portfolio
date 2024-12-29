@@ -4,3 +4,4 @@ Kouluprojekteja ym. (Haaga-Helia AMK, tietjoenkäsittely & tietoliikenne)
 - Pelin UI, Figma
 - Digitaalisen palvelun kehitys (Taidekupla)
 - Adobe Illustrator töitä
+- Jotain web-devausta
