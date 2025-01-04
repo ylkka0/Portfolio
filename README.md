@@ -1,4 +1,4 @@
-Kouluprojekteja ym. (Haaga-Helia AMK, tietjoenkäsittely & tietoliikenne)
+Kouluprojekteja ym. (Haaga-Helia AMK, tietjoenkäsittely & tietoliikenne, digitaaliset palvelut)
 
 - 3D peli, Unity
 - Pelin UI, Figma
