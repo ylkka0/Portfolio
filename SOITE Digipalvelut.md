@@ -1,4 +1,4 @@
-Keski-Pohjanmaan hyvinvointialueen Tukea digiasiointiin -sivuston prototyyppi (kannattaa käyttää Fill Screen asetusta, optimoitu tabille).
+Keski-Pohjanmaan hyvinvointialueen Tukea digiasiointiin -sivuston prototyyppi (kannattaa käyttää Fill Screen asetusta, optimoitu tabille). Sivun tarkoitus on luoda asiakaslähtöinen ja saavutettava infopläjäys digitaaliseen asiointiin ja palveluiden käyttöön, kohderyhmänä ikääntyneet. Tavoitteena on tällä on edistää kasvua digipalveluiden käytössä.
 
 Myös ulkoistettujen palveluiden integrointia Whitelabel -ratkaisuksi.
 
