@@ -3,6 +3,8 @@ Algoritmeihin nojautuva taideyhteisö, kehitysprojekti 3 hengen tiimissä, alust
 
 Palvelumuotoilun painotus: asiakasymmärrys, pivotointi, markkinointi, testaus, kehitys
 
+Verkkosivun tekninen painotus: SEO, Analytiikka, WPForms ja dynaaminen kartta
+
 [Taidekupla.fi](https://www.taidekupla.fi/)
 ![taidekupla2](https://github.com/user-attachments/assets/322ee75e-afb3-4a62-ab62-b17da68679b7)
 ![taidekupla1](https://github.com/user-attachments/assets/3eaac8b4-979e-4160-b229-4ac4b8439e6a)
