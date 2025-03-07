@@ -4,7 +4,7 @@ Myös ulkoistettujen palveluiden integrointia Whitelabel -ratkaisuksi.
 
 [Kyselytutkimus](https://forms.gle/w7zsg5mbGomfjQz9A)
 
-[Tukea digiasiointiin -proto](https://www.figma.com/design/ouxr4ZJgPXTLJzoYnh4da6/Digituki?node-id=0-1&t=K5KRqP3uvxHMO401-1)
+[Tukea digiasiointiin -proto](https://www.figma.com/proto/ouxr4ZJgPXTLJzoYnh4da6/Digituki?node-id=4-5&t=CSm8PA1ICojNyj8w-1&scaling=contain&content-scaling=fixed&page-id=0%3A1)
 
 [Tukea digiasiointiin -verkkosivu](http://www.haagahelia.www66.zoner-asiakas.fi/matti.yli-hukka/)
 
