@@ -2,7 +2,7 @@ Kouluprojekteja ym. (Haaga-Helia AMK, tietojenkäsittely & tietoliikenne, digita
 
 - 3D kauhupeli, Unity
 - Pelin UI, Figma
-- Soiten Tukea Digiasiointiin -sivu & palveluiden integrointia, Figma (> WordPress)
+- Soiten Tukea Digiasiointiin -sivusto & palveluiden integrointia (Figma -> WordPress), kyselytutkimus
 - Digitaalisen palvelun kehitys (Taidekupla), WordPress
 - Adobe Illustrator töitä
 - Jotain web-devausta (node.js; React / Vite)
