@@ -8,6 +8,6 @@ Myös ulkoistettujen palveluiden integrointia Whitelabel -ratkaisuksi.
 
 [Tukea digiasiointiin -verkkosivu](http://www.haagahelia.www66.zoner-asiakas.fi/matti.yli-hukka/)
 
-[Integrointi -proto](https://www.figma.com/design/hIA708s4iNAphiygftYidF/Integrointi?node-id=1-4&t=SqTPTcdsoNEgkFs8-1)
+[Integrointi -proto]([https://www.figma.com/design/hIA708s4iNAphiygftYidF/Integrointi?node-id=1-4&t=SqTPTcdsoNEgkFs8-1](https://www.figma.com/proto/hIA708s4iNAphiygftYidF/Integrointi?node-id=44-102&p=f&t=xYcfeemoA8Z7jwWL-1&scaling=contain&content-scaling=fixed&page-id=1%3A4))
 
 ![Untitled design (3)](https://github.com/user-attachments/assets/a9aced46-303d-44be-9c2f-c180c58654f0)
