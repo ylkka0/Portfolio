@@ -4,6 +4,9 @@ Moninpelituki.
 
 Ostakaa joku tää?
 
+[Linkki peliin (itch)](https://ylkka0.itch.io/pilkki-1999)
+*Jos pelaat selaimella, paina fullscreen!
+
 
 ![Näyttökuva 2025-05-12 132045](https://github.com/user-attachments/assets/36b39f76-40e7-40ba-ba81-e6d428ddcc07)
 ![Näyttökuva 2025-05-12 132417](https://github.com/user-attachments/assets/09765270-9b30-4947-9089-1f77d0e103c1)
