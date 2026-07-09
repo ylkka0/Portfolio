@@ -1,3 +1,3 @@
-#Devaus:
+# Devaus:
 
 https://www.kasinonaata.com/
