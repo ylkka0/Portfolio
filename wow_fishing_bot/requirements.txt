@@ -1,2 +1,0 @@
-numpy>=1.26,<3
-PyAudioWPatch>=0.2.12.6,<0.3
