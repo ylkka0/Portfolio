@@ -57,3 +57,6 @@ F9: Quit
 
 
 
+## Download ZIP
+
+[**Download WoW Forever – Fishing Bot (ZIP)**](https://github.com/ylkka0/Portfolio/releases/latest)
