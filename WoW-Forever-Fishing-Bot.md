@@ -1,8 +1,6 @@
 # WoW Forever – Fishing Bot
 
-### Python-based Fishing Automation Tool
-
-A simple desktop automation application developed in Python for automating fishing in WoWF.
+### A simple desktop automation application developed in Python for automating fishing in WoWF.
 
 The project demonstrates practical experience in Python programming, GUI development, real-time event detection and automation workflows.
 
