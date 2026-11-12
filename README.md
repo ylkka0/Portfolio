@@ -2,7 +2,7 @@ Kouluprojekteja ym. (Haaga-Helia AMK, tietojenkäsittely & tietoliikenne, digita
 
 - 3D Kauhupeli, Unity
 - 2D Kalastuspeli, Unity
-- WoW Forever Fishing Bot, Python-based desktop automation application
+- WoW Forever Fishing Bot, Python-pohjainen työpöytäautomaatiosovellus
 - Pelin UI, Figma
 - Soiten Tukea Digiasiointiin -sivusto & palveluiden integrointia (Figma -> WordPress), kyselytutkimus
 - Digitaalisen palvelun kehitys (Taidekupla), WordPress
