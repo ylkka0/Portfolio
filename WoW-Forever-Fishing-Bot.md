@@ -6,6 +6,9 @@ A simple desktop automation application developed in Python for automating fishi
 
 The project demonstrates practical experience in Python programming, GUI development, real-time event detection and automation workflows.
 
+<img width="755" height="824" alt="Näyttökuva 2026-11-12 210516" src="https://github.com/user-attachments/assets/fa995d8b-78b1-4c7a-bb48-ed17cbe74607" />
+
+
 ## Key Features
 
 - Automated fishing interactions
