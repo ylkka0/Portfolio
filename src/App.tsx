@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowDown, ArrowRight, ArrowUpRight, Braces, Check, ChevronDown, Code2, ExternalLink, Github, Layers3, Menu, Workflow, X } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Braces, Check, ChevronDown, Code2, Github, Layers3, Menu, Workflow, X } from 'lucide-react';
 
 type Project = {
   number: string;
