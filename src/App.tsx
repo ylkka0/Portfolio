@@ -101,33 +101,30 @@ function ProjectVisual({ kind }: { kind: string }) {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
-  const closeMenu = () => setMenuOpen(false);
+  const [projectsOpen, setProjectsOpen] = useState(false);
+  const [activeProject, setActiveProject] = useState(0);
+  const closeMenu = () => { setMenuOpen(false); setProjectsOpen(false); };
   return (
     <div className="site">
       <header className="site-header">
         <a href="#alku" className="brand" onClick={closeMenu} aria-label="Takaisin alkuun">
-          <span className="brand-symbol">M<span>.</span></span><span className="brand-text">PORTFOLIO <span>/ 2026</span></span>
+          <span className="brand-symbol">M.</span>
         </a>
         <nav className={menuOpen ? 'nav nav-open' : 'nav'} aria-label="Päänavigaatio">
-          <a onClick={closeMenu} href="#projektit">Projektit</a>
+          <div className="project-nav" onMouseEnter={() => { if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) setProjectsOpen(true); }} onMouseLeave={() => { if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) setProjectsOpen(false); }} onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) setProjectsOpen(false); }} onKeyDown={e => { if (e.key === 'Escape') { setProjectsOpen(false); e.currentTarget.querySelector('button')?.focus(); } }}>
+            <button className="project-trigger" aria-expanded={projectsOpen} aria-controls="project-dropdown" onClick={() => setProjectsOpen(!projectsOpen)}>Projektit <ChevronDown size={13}/></button>
+            {projectsOpen && <div className="dropdown-wrap" id="project-dropdown"><div className="project-dropdown"><div className="dropdown-list">{projects.map((project,i) => <a key={project.number} className={activeProject===i?'selected':''} href={'#project-'+project.number} onMouseEnter={() => setActiveProject(i)} onFocus={() => setActiveProject(i)} onClick={closeMenu}><strong>{project.title}</strong><small>{['AI ja automaatio','Web ja palvelumuotoilu','UX ja digitaaliset palvelut','Pelikehitys'][i]}</small></a>)}</div><div className="dropdown-preview" key={activeProject}><ProjectVisual kind={projects[activeProject].illustration}/><p>{projects[activeProject].description}</p></div></div></div>}
+          </div>
           <a onClick={closeMenu} href="#osaaminen">Osaaminen</a>
           <a onClick={closeMenu} href="#minusta">Minusta</a>
-          <a className="nav-contact" onClick={closeMenu} href="#yhteys">Ota yhteyttä <ArrowUpRight size={15} /></a>
+          <a className="nav-contact" onClick={closeMenu} href="#yhteys">Yhteys</a>
         </nav>
         <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Sulje valikko' : 'Avaa valikko'} aria-expanded={menuOpen}>{menuOpen ? <X /> : <Menu />}</button>
       </header>
 
       <main>
         <section id="alku" className="hero container">
-          <div className="hero-topline"><span className="status-dot" /> WEB DEVELOPMENT · DIGITAL SERVICES · AI AUTOMATION</div>
-          <div className="hero-copy">
-            <span className="hero-overline">PORTFOLIO / VALIKOITUJA TÖITÄ</span>
-            <h1>Rakennan digitaalisia<br /><em>ratkaisuja,</em> joilla on<br />merkitystä<span className="accent-period">.</span></h1>
-            <p>Web-kehitystä, käyttäjälähtöisiä palveluita ja älykästä automaatiota. Ideasta toimivaksi toteutukseksi.</p>
-            <div className="hero-actions"><a className="button button-primary" href="#projektit">Tutustu projekteihin <ArrowUpRight size={18}/></a><a className="button button-text" href="#minusta">Lisää minusta <ArrowDown size={17}/></a></div>
-          </div>
-          <div className="hero-meta"><span>01 — SUUNNITTELU</span><span>02 — KEHITYS</span><span>03 — AUTOMAATIO</span></div>
-          <span className="hero-decor" aria-hidden="true">✳</span>
+          <div className="hero-copy"><h1>Web Developer.<br/>Digital Designer.</h1><p>Web-kehitys · Digitaaliset palvelut · Automaatio</p></div><a className="hero-scroll" href="#minusta">( &nbsp; tutustu minuun &nbsp; ) <ArrowDown size={12}/></a>
         </section>
 
         <section id="projektit" className="section projects-section">
@@ -135,7 +132,7 @@ function App() {
             <SectionHeading eyebrow="01 / PROJEKTIT" title="Valikoituja töitä." text="Käytännön toteutuksia verkkopalveluista tekoälyautomaatioon." />
             <div className="projects-grid">
               {projects.map((project) => (
-                <article className={project.featured ? 'project-card project-featured' : 'project-card'} key={project.number}>
+                <article id={'project-'+project.number} className={project.featured ? 'project-card project-featured' : 'project-card'} key={project.number}>
                   <ProjectVisual kind={project.illustration} />
                   <div className="project-info">
                     <div className="project-meta"><span>{project.number} / {project.category}</span>{project.featured && <span className="featured-label">FEATURED</span>}</div>
