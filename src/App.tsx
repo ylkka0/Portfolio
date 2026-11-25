@@ -11,6 +11,8 @@ type Project = {
   action: string;
   illustration: string;
   featured?: boolean;
+  preview?: string;
+  short?: string;
 };
 
 const projects: Project[] = [
@@ -55,6 +57,11 @@ const projects: Project[] = [
     action: 'Pelaa peliä',
     illustration: 'pilkki',
   },
+  {"number":"05","title":"Adobe Illustrator","category":"GRAAFINEN SUUNNITTELU","description":"Kokoelma Adobe Illustrator -töitä: typografiaa, kansisuunnittelua, mainoksia ja julisteita.","technologies":["Adobe Illustrator"],"link":"https://github.com/ylkka0/Portfolio/tree/main/Adobe%20Illustrator.imgs","action":"Katso kaikki työt","illustration":"illustrator","preview":"https://raw.githubusercontent.com/ylkka0/Portfolio/main/Adobe%20Illustrator.imgs/Expressiivinen%20typografia.png","short":"Graafinen suunnittelu"},
+  {"number":"06","title":"Mpappa UI","category":"UI / PROTOTYYPPI","description":"Kuvitteellisen pelin käyttöliittymägrafiikkaa ja interaktiivinen Figma-prototyyppi.","technologies":["Figma","UI Design"],"link":"https://www.figma.com/proto/QtoQ1V1p8LAbF7n4c1X9dA/Mpappa?page-id=&node-id=4-6&starting-point-node-id=4%3A6&t=mQ1rwDTWHPIBbQIf-1","action":"Avaa Figma-prototyyppi","illustration":"mpappa","short":"Pelin käyttöliittymäprototyyppi"},
+  {"number":"07","title":"WoW Forever – Fishing Bot","category":"PYTHON / AUTOMAATIO","description":"Henkilökohtainen Python-ohjelmointiharjoitus, jossa yhdistyvät työpöytäsovelluksen käyttöliittymä, äänipohjainen tapahtumantunnistus ja automaatiologiikka. Ei Blizzard Entertainmentin virallinen projekti.","technologies":["Python","GUI","Tapahtumapohjainen ohjelmointi"],"link":"https://github.com/ylkka0/Portfolio/blob/main/WoW-Forever-Fishing-Bot.md","action":"Projektin tiedot","illustration":"fishing","preview":"https://github.com/user-attachments/assets/fa995d8b-78b1-4c7a-bb48-ed17cbe74607","short":"Python ja työpöytäautomaatio"},
+  {"number":"08","title":"Djatlov – 3D-kauhudemo","category":"PELIKEHITYS / KESKENERÄINEN","description":"Kahdeksan viikon yksilöprojektina Unitylla toteutettu 3D-kauhudemo. Peli on keskeneräinen; esimerkiksi game over -ruutu puuttuu.","technologies":["Unity"],"link":"https://ylkka0.itch.io/djatlovgame","action":"Tutustu demoon","illustration":"djatlov","short":"Unity-kauhudemo"},
+  {"number":"09","title":"Kasinonaata.com","category":"WEB-KEHITYS / KESKENERÄINEN","description":"Keskeneräinen verkkosivuston kehitysprojekti.","technologies":["Web-kehitys"],"link":"https://www.kasinonaata.com/","action":"Avaa sivusto","illustration":"kasinonaata","short":"Keskeneräinen verkkosivusto"},
 ];
 
 const stack = [
@@ -74,6 +81,9 @@ function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: stri
 }
 
 function ProjectVisual({ kind }: { kind: string }) {
+  const project = projects.find(p => p.illustration === kind);
+  if (project?.preview) return <div className="project-visual visual-image"><img src={project.preview} alt={project.title + ' – projektikuva'}/></div>;
+  if (project && !['masadesk','taide','soite','pilkki'].includes(kind)) return <div className="project-visual visual-simple"><span>{project.title}</span></div>;
   if (kind === 'masadesk') return (
     <div className="project-visual visual-masadesk" aria-label="Masadesk-automaation havainnekuva">
       <div className="visual-grid" />
@@ -112,7 +122,7 @@ function App() {
         <nav className="nav" aria-label="Päänavigaatio">
           <div className="project-nav" onMouseEnter={() => { if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) setProjectsOpen(true); }} onMouseLeave={() => { if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) setProjectsOpen(false); }} onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) setProjectsOpen(false); }} onKeyDown={e => { if (e.key === 'Escape') { setProjectsOpen(false); e.currentTarget.querySelector('button')?.focus(); } }}>
             <button className="project-trigger" aria-expanded={projectsOpen} aria-controls="project-dropdown" onClick={() => setProjectsOpen(!projectsOpen)}>Projektit <ChevronDown size={13}/></button>
-            {projectsOpen && <div className="dropdown-wrap" id="project-dropdown"><div className="project-dropdown"><div className="dropdown-list">{projects.map((project,i) => <a key={project.number} className={activeProject===i?'selected':''} href={'#project-'+project.number} onMouseEnter={() => setActiveProject(i)} onFocus={() => setActiveProject(i)} onClick={closeMenu}><strong>{project.title}</strong><small>{['AI ja automaatio','Web ja palvelumuotoilu','UX ja digitaaliset palvelut','Pelikehitys'][i]}</small></a>)}</div><div className="dropdown-preview" key={activeProject}><ProjectVisual kind={projects[activeProject].illustration}/><p>{projects[activeProject].description}</p></div></div></div>}
+            {projectsOpen && <div className="dropdown-wrap" id="project-dropdown"><div className="project-dropdown"><div className="dropdown-list">{projects.map((project,i) => <a key={project.number} className={activeProject===i?'selected':''} href={'#project-'+project.number} onMouseEnter={() => setActiveProject(i)} onFocus={() => setActiveProject(i)} onClick={closeMenu}><strong>{project.title}</strong><small>{project.short ?? ['AI ja automaatio','Web ja palvelumuotoilu','UX ja digitaaliset palvelut','Pelikehitys'][i]}</small></a>)}</div><div className="dropdown-preview" key={activeProject}><ProjectVisual kind={projects[activeProject].illustration}/><p>{projects[activeProject].description}</p></div></div></div>}
           </div>
         </nav>
         <div className="header-contact">
