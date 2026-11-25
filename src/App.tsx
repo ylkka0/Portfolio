@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowDown, ArrowUpRight, Braces, Check, ChevronDown, Code2, Github, Layers3, Menu, Workflow, X } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Braces, Check, ChevronDown, Code2, Github, Layers3, Mail, Workflow } from 'lucide-react';
 
 type Project = {
   number: string;
@@ -99,27 +99,26 @@ function ProjectVisual({ kind }: { kind: string }) {
 }
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
-  const closeMenu = () => { setMenuOpen(false); setProjectsOpen(false); };
+  const closeMenu = () => setProjectsOpen(false);
   return (
     <div className="site">
       <header className="site-header">
         <a href="#alku" className="brand" onClick={closeMenu} aria-label="Takaisin alkuun">
           <span className="brand-symbol">M.</span>
         </a>
-        <nav className={menuOpen ? 'nav nav-open' : 'nav'} aria-label="Päänavigaatio">
+        <nav className="nav" aria-label="Päänavigaatio">
           <div className="project-nav" onMouseEnter={() => { if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) setProjectsOpen(true); }} onMouseLeave={() => { if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) setProjectsOpen(false); }} onBlur={e => { if (!e.currentTarget.contains(e.relatedTarget)) setProjectsOpen(false); }} onKeyDown={e => { if (e.key === 'Escape') { setProjectsOpen(false); e.currentTarget.querySelector('button')?.focus(); } }}>
             <button className="project-trigger" aria-expanded={projectsOpen} aria-controls="project-dropdown" onClick={() => setProjectsOpen(!projectsOpen)}>Projektit <ChevronDown size={13}/></button>
             {projectsOpen && <div className="dropdown-wrap" id="project-dropdown"><div className="project-dropdown"><div className="dropdown-list">{projects.map((project,i) => <a key={project.number} className={activeProject===i?'selected':''} href={'#project-'+project.number} onMouseEnter={() => setActiveProject(i)} onFocus={() => setActiveProject(i)} onClick={closeMenu}><strong>{project.title}</strong><small>{['AI ja automaatio','Web ja palvelumuotoilu','UX ja digitaaliset palvelut','Pelikehitys'][i]}</small></a>)}</div><div className="dropdown-preview" key={activeProject}><ProjectVisual kind={projects[activeProject].illustration}/><p>{projects[activeProject].description}</p></div></div></div>}
           </div>
-          <a onClick={closeMenu} href="#osaaminen">Osaaminen</a>
-          <a onClick={closeMenu} href="#minusta">Minusta</a>
-          <a className="nav-contact" onClick={closeMenu} href="#yhteys">Yhteys</a>
         </nav>
-        <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? 'Sulje valikko' : 'Avaa valikko'} aria-expanded={menuOpen}>{menuOpen ? <X /> : <Menu />}</button>
+        <div className="header-contact">
+          <a className="nav-contact" href="https://www.linkedin.com/in/matti-yli-hukka/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a className="mail-link" href="mailto:yli.hukka@gmail.com" aria-label="Lähetä sähköpostia" title="yli.hukka@gmail.com"><Mail size={19} strokeWidth={1.6}/></a>
+        </div>
       </header>
 
       <main>
