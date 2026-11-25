@@ -65,9 +65,9 @@ const projects: Project[] = [
 ];
 
 const stack = [
-  { title: 'Kehitys', items: 'React · JavaScript · TypeScript · REST API' },
-  { title: 'Automaatio & AI', items: 'n8n · Ollama · Docker · API-integraatiot' },
-  { title: 'Digitaaliset palvelut', items: 'WordPress · Figma · UX · SEO' },
+  { title: 'Kehitys', items: 'React · JavaScript · TypeScript · HTML · CSS · Python · C# · Git · GitHub · REST API · Unity' },
+  { title: 'Automaatio & AI', items: 'n8n · Power Automate · LLM · Ollama · Qwen · Docker · Freshdesk · API-integraatiot' },
+  { title: 'Digitaaliset palvelut', items: 'WordPress · Figma · Adobe Creative Cloud · GIMP · UI/UX · Palvelumuotoilu · Saavutettavuus · SEO · Web-analytiikka' },
 ];
 
 function SectionHeading({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) {
