@@ -124,7 +124,7 @@ function App() {
 
       <main>
         <section id="alku" className="hero container">
-          <div className="hero-copy"><h1>Web Developer.<br/>Digital Designer.</h1><p>Web-kehitys · Digitaaliset palvelut · Automaatio</p></div><a className="hero-scroll" href="#minusta">( &nbsp; tutustu minuun &nbsp; ) <ArrowDown size={12}/></a>
+          <div className="hero-copy"><p style={{ fontSize: 12, letterSpacing: "0.16em", marginBottom: 20 }}>AI FIRST</p><h1>Web Development.<br/>Digital Design.<br/>SEO &amp; Marketing.</h1></div><a className="hero-scroll" href="#minusta">( &nbsp; tutustu minuun &nbsp; ) <ArrowDown size={12}/></a>
         </section>
 
         <section id="projektit" className="section projects-section">
