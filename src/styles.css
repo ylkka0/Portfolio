@@ -20,3 +20,18 @@
 .section{padding:80px 0;background:#10171d;border-color:#ffffff12}.container{width:min(850px,calc(100% - 48px))}.eyebrow,.project-meta,.tech-tags,.skill-top,.projects-grid>.project-card>.project-visual{display:none}.section-heading h2,.section h2,.contact-section h2{font:400 clamp(30px,4vw,44px)/1.15 Arial;letter-spacing:-1.5px}.section-heading p,.project-info p,.case-intro>p,.about-text p,.skill-card p{color:#c5ced5}.projects-grid,.skills-grid{display:block}.project-card,.project-featured,.skill-card{display:block;background:none;border:0;border-top:1px solid #ffffff19;border-radius:0;min-height:0}.project-card:hover{transform:none;border-color:#ffffff30}.project-info,.project-featured .project-info,.skill-card{padding:24px 0}.project-info h3,.project-featured h3,.skill-card h3{font:400 24px Arial;margin:0 0 12px}.project-info p{margin-bottom:12px}.project-link,.inline-link,.case-intro h2 span,.about-section h2 em,.contact-section h2 em{color:#e7edf2;font-weight:400}.project-link{margin-top:8px}.case-layout,.about-grid{gap:30px}.case-panel,.case-panel-head,.case-reason,.case-step{background:#1a252e;border-color:#ffffff18;color:#dbe3ea;box-shadow:none}.case-panel-head,.case-footer,.case-step>span,.case-reason span,.terminal-label{color:#c9d4dc}.outline-action{border-color:#ffffff30;color:#e7edf2;background:transparent;font-weight:400}.status-dot{background:#b7c9d6;box-shadow:none}.contact-section{background:#10171d;color:#f5f5f5;border-top:1px solid #ffffff15;padding:80px 0}.contact-section p{color:#c5ced5}.contact-section .button-primary{background:#f5f5f5;color:#141b21;border-radius:999px;font-weight:400}.site-footer{letter-spacing:0}.site-footer a{color:#c5ced5}a:focus-visible,button:focus-visible{outline:2px solid #d8e5ee;outline-offset:4px}
 @media(max-width:680px){.site-header{height:66px;padding:0 20px}.nav{top:66px;gap:8px;background:#10171df5;margin:0 12px;border-radius:12px}.dropdown-wrap{position:static;width:100%;padding-top:4px}.project-dropdown{grid-template-columns:1fr}.dropdown-preview{display:none}.dropdown-list a{padding:10px}.hero.container{background-position:48% center}.hero h1{font-size:clamp(35px,8vw,58px)}.section{padding:60px 0}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* Centered navigation and direct contact links */
+.site-header{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;padding:0 clamp(20px,3vw,48px)}
+.site-header .brand{justify-self:start}
+.site-header .nav{justify-self:center;display:flex;align-items:center;justify-content:center;position:static;padding:0;margin:0;background:none;border:0;border-radius:0;gap:0}
+.header-contact{justify-self:end;display:flex;align-items:center;gap:14px}
+.header-contact .nav-contact{margin:0;padding:9px 17px;font-size:14px;white-space:nowrap;transition:background .2s}
+.header-contact .nav-contact:hover{background:#dce5ec}
+.mail-link{display:grid;place-items:center;width:36px;height:36px;color:#fff;transition:opacity .2s}
+.mail-link:hover{opacity:.7}
+.project-nav .dropdown-wrap{left:50%;right:auto;transform:translateX(-50%);width:min(570px,calc(100vw - 40px))}
+.project-trigger{white-space:nowrap}
+.project-trigger[aria-expanded="true"] svg{transform:rotate(180deg)}
+.project-trigger svg{transition:transform .2s}
+@media(max-width:680px){.site-header{padding:0 16px;gap:6px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.site-header .nav{font-size:13px}.header-contact{gap:5px}.header-contact .nav-contact{padding:7px 10px;font-size:12px}.mail-link{width:25px;height:30px}.mail-link svg{width:17px;height:17px}.project-nav .dropdown-wrap{position:absolute;top:100%;width:min(360px,calc(100vw - 32px))}.dropdown-list a{padding:12px}}
