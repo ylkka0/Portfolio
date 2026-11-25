@@ -35,3 +35,12 @@
 .project-trigger[aria-expanded="true"] svg{transform:rotate(180deg)}
 .project-trigger svg{transition:transform .2s}
 @media(max-width:680px){.site-header{padding:0 16px;gap:6px;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)}.site-header .nav{font-size:13px}.header-contact{gap:5px}.header-contact .nav-contact{padding:7px 10px;font-size:12px}.mail-link{width:25px;height:30px}.mail-link svg{width:17px;height:17px}.project-nav .dropdown-wrap{position:absolute;top:100%;width:min(360px,calc(100vw - 32px))}.dropdown-list a{padding:12px}}
+
+/* Expanded project navigation */
+.project-dropdown{grid-template-columns:minmax(0,40%) minmax(0,60%);max-height: min(560px,calc(100dvh - 110px));overflow:hidden}
+.dropdown-list{min-height:0;max-height:min(550px,calc(100dvh - 120px));overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#ffffff30 transparent}
+.dropdown-preview{min-width:0;min-height:0;max-height:360px}
+.dropdown-preview .visual-image{background:#101820;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.dropdown-preview .visual-image img{width:100%;height:100%;max-height:280px;object-fit:contain}
+.dropdown-preview .visual-simple{background:#25333d;padding:20px;text-align:center;font-size:24px;font-weight:400;letter-spacing:-.5px}
+@media(max-width:680px){.project-dropdown{grid-template-columns:minmax(0,1fr)}}
