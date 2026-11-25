@@ -133,7 +133,7 @@ function App() {
 
       <main>
         <section id="alku" className="hero container">
-          <div className="hero-copy"><p style={{ fontSize: 15, letterSpacing: "0.16em", marginBottom: 20 }}>AI FIRST</p><h1>Web Development.<br/>Digital Design.<br/>SEO &amp; Marketing.</h1></div><a className="hero-scroll" href="#minusta">( &nbsp; scrollaa alas &nbsp; ) <ArrowDown size={12}/></a>
+          <div className="hero-copy"><p style={{ fontSize: 14, color: "#F4E6B0", letterSpacing: "0.16em", marginBottom: 20 }}>AI FIRST</p><h1>Web Development.<br/>Digital Design.<br/>SEO &amp; Marketing.</h1></div><a className="hero-scroll" href="#minusta">( &nbsp; scrollaa alas &nbsp; ) <ArrowDown size={12}/></a>
         </section>
 
         <section id="projektit" className="section projects-section">
