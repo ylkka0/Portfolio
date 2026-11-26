@@ -58,3 +58,6 @@
 .about-text p:first-child{margin-top:0}
 @media(max-width:1050px){.about-grid.container{width:calc(100% - 48px);grid-template-columns:minmax(0,1fr);gap:26px}.about-heading{grid-column:auto}.about-profile{padding:0;grid-template-columns:minmax(0,0.85fr) minmax(0,1fr);gap:30px}.about-portrait{max-width:320px}.about-text{border-left:0;border-top:1px solid #ffffff30;padding:28px 0 0}}
 @media(max-width:600px){.about-grid.container{width:calc(100% - 36px)}.about-profile{grid-template-columns:minmax(0,1fr);gap:24px}.about-manifesto{max-width:480px}}
+
+/* Raise manifesto relative to portrait on desktop */
+@media(min-width:1051px){.about-manifesto{margin-top:-24px}}

@@ -197,12 +197,12 @@ function App() {
             <div className="about-profile">
               <img className="about-portrait" src={new URL("./images/masa.png", import.meta.url).href} alt="Musta­valkoinen muotokuva" loading="lazy" width={1122} height={1402}/>
               <div className="about-manifesto">
-                <h3>Älä palkkaa tätä tyyppiä.</h3>
-                <p>Ensinnäkään hän ei suostu tekemään sinulle ilmaista verkkosivustoa. Hän väittää, ettei hienosta sivustosta ole hyötyä, jos kukaan ei löydä sinne.</p>
-                <p>Toiseksi hän ei edes suostu keksimään asiakasmääriä saadakseen sinut allekirjoittamaan sopimuksen. Hän lupaa mieluummin vähemmän ja toimittaa enemmän.</p>
-                <p>Kolmanneksi hän tekee oikeasti töitä hakukoneoptimoinnin eteen, jotta paikalliset asiakkaat löytäisivät yrityksesi Googlesta ilman, että rahaa täytyy polttaa mainontaan.</p>
-                <p>Ja kaiken huipuksi hän takaa vain aikansa, työpanoksensa ja sen, että homma tehdään kunnolla. Miten hän kehtaa?</p>
-                <p><strong>Älä siis ota yhteyttä — ellet halua oikeaa tekemistä tyhjän myyntipuheen sijaan.</strong></p>
+                <h3>Älä palkkaa tätä tyyppiä. Eihän se ede näe?</h3>
+                <p>Ensinnäkään, hän ei suostu tekemään sinulle ilmaista verkkosivustoa. Hän väittää, ettei hienosta sivustosta ole hyötyä, jos kukaan ei löydä sinne.</p>
+                <p>Toiseksi hän ei edes suostu keksimään asiakasmääriä saadakseen sinut yhteistyöhön. Hän lupaa mieluummin vähemmän ja toimittaa enemmän.</p>
+                <p>Kolmanneksi hän tekee oikeasti töitä hakukoneoptimoinnin eteen, jotta asiakkaat löytäisivät yrityksesi Googlesta ja AI-koneista ilman, että rahaa täytyy polttaa mainontaan.</p>
+                <p>Ja kaiken huipuksi hän takaa vain aikansa, työpanoksensa ja sen, että homma tehdään kunnolla. Miten kehtaa?</p>
+                <p><strong>Älä siis ota yhteyttä. Ellet sitten halua oikeaa tekemistä tyhjän myyntipuheen sijaan.</strong></p>
               </div>
             </div>
             <div className="about-text"><p><strong>Masa = Tietojenkäsittelyn ja liiketoiminnan IT-tradenomi.</strong></p><p>Näissä käsissä yhdistyy digitaalisten palveluiden suunnittelu, web-kehitys, SEO-ympäristö ja tekoälyä hyödyntävät tekniset integraatiot. Oikeastaan, aina kun joku uusi kiehtoo mutta en osaa sitä, niin opettelen.</p><p>Uskon ratkaisuihin, joissa hyvä käyttökokemus, toimiva teknologia ja löydettävyys tukevat toisiaan. Täytyy muistaa, että AI:n mahdollisuudet ovat subjektiivisesti ~rajattomat.</p><p>Oli kyse digitaalisesta toimenpiteestä, luistimen terottamisesta tai kehitysideasta, teen taidonnäytteet asiakkaalle, en itselleni.</p><a href="https://github.com/ylkka0" target="_blank" rel="noopener noreferrer" className="inline-link"><Github size={17}/> Tutustu GitHub-profiiliini <ArrowUpRight size={16}/></a></div></div>
