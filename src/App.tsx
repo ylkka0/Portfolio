@@ -53,7 +53,7 @@ const projects: Project[] = [
     number: '04',
     title: 'PILKKI 1999',
     category: 'PELIKEHITYS / UNITY',
-    description: 'Itsenäisesti toteutettu, fysiikkapainotteinen 2D-kalastuspeli. Projektiin sisältyy myös moninpelituki.',
+    description: 'Unitylla toteutettu, fysiikkapainotteinen 2D-kalastuspeli. Projektiin sisältyy myös moninpelituki.',
     technologies: ['Unity', 'C#', 'Game Design'],
     link: 'https://ylkka0.itch.io/pilkki-1999',
     action: 'Pelaa peliä',
