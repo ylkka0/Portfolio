@@ -198,10 +198,10 @@ function App() {
               <img className="about-portrait" src={new URL("./images/masa.png", import.meta.url).href} alt="Musta­valkoinen muotokuva" loading="lazy" width={1122} height={1402}/>
               <div className="about-manifesto">
                 <h3>Älä palkkaa tätä tyyppiä. Eihän se ede näe?</h3>
-                <p><em>Ensinnäkään, hän ei suostu tekemään sulle ilmaista nettisivua. Ja vielä väittää, ettei hienosta sivustosta ole hyötyä, jos kukaan ei sinne löydä.</em></p>
-                <p><em>Toiseksi hän ei edes suostu keksimään asiakasmääriä saadakseen sut yhteistyöhön. Mielummin lupaa vähemmän ja toimittaa enemmän.</em></p>
-                <p><em>No kolmanneksi hän painaa täysiä hakukoneoptimoinnin eteen, jotta asiakkaat löytäisivät yrityksesi Googlesta ja AI-koneista ilman, että sun rahaa palaa mainontaan.</em></p>
-                <p><em>Ja kaiken huipuksi hän takaa vain aikansa, työpanoksensa ja sen, että sokkona ei huitaista. Miten kehtaa?</em></p>
+                <p><em>&nbsp;&nbsp;Ensinnäkään, hän ei suostu tekemään sulle ilmaista nettisivua. Ja vielä väittää, ettei hienosta sivustosta ole hyötyä, jos kukaan ei sinne löydä.</em></p>
+                <p><em>&nbsp;&nbsp;Toiseksi hän ei edes suostu keksimään asiakasmääriä saadakseen sut yhteistyöhön. Mielummin lupaa vähemmän ja toimittaa enemmän.</em></p>
+                <p><em>&nbsp;&nbsp;No kolmanneksi hän painaa täysiä hakukoneoptimoinnin eteen, jotta asiakkaat löytäisivät yrityksesi Googlesta ja AI-koneista ilman, että sun rahaa palaa mainontaan.</em></p>
+                <p><em>&nbsp;&nbsp;Ja kaiken huipuksi hän takaa vain aikansa, työpanoksensa ja sen, että sokkona ei huitaista. Miten kehtaa?</em></p>
                 <p><strong>Älä siis ota yhteyttä. Ellet sitten halua oikeaa tekemistä tyhjän myyntipuheen sijaan.</strong></p>
               </div>
             </div>
