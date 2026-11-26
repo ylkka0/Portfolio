@@ -194,7 +194,6 @@ function App() {
 
         <section id="minusta" className="section about-section">
           <div className="container about-grid">
-            <div className="about-heading"><span className="eyebrow"><span className="eyebrow-line" /> 03 / MINUSTA</span><h2>Uteliaisuudesta<br /><em>toimivaksi koodiksi.</em></h2></div>
             <div className="about-profile">
               <img className="about-portrait" src={new URL("./images/masa.png", import.meta.url).href} alt="Musta­valkoinen muotokuva" loading="lazy" width={1122} height={1402}/>
               <div className="about-manifesto">
