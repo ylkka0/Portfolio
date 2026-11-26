@@ -44,3 +44,16 @@
 .dropdown-preview .visual-image img{width:100%;height:100%;max-height:280px;object-fit:contain}
 .dropdown-preview .visual-simple{background:#25333d;padding:20px;text-align:center;font-size:24px;font-weight:400;letter-spacing:-.5px}
 @media(max-width:680px){.project-dropdown{grid-template-columns:minmax(0,1fr)}}
+
+/* About portrait and personal manifesto */
+.about-grid{grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);column-gap:48px;row-gap:24px;align-items:start}
+.about-heading{grid-column:1/-1}
+.about-heading h2{margin:0 0 12px}
+.about-profile{min-width:0}
+.about-portrait{display:block;width:100%;max-width:320px;height:auto;aspect-ratio:1122/1402;object-fit:cover;border-radius:4px}
+.about-manifesto{margin-top:24px}
+.about-manifesto h3{font:400 24px/1.2 Arial;margin:0 0 15px;color:#f3f4f5}
+.about-manifesto p{font-size:14px;line-height:1.75;color:#c5ced5;margin:0 0 12px}
+.about-text{padding-top:0}
+.about-text p:first-child{margin-top:0}
+@media(max-width:680px){.about-grid{grid-template-columns:minmax(0,1fr);gap:26px}.about-heading{grid-column:auto}.about-portrait{max-width:320px}.about-manifesto{max-width:480px}}
