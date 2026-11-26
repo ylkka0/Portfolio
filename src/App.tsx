@@ -128,6 +128,7 @@ function App() {
             <button className="project-trigger" aria-expanded={projectsOpen} aria-controls="project-dropdown" onClick={() => setProjectsOpen(!projectsOpen)}>Projektit <ChevronDown size={13}/></button>
             {projectsOpen && <div className="dropdown-wrap" id="project-dropdown"><div className="project-dropdown"><div className="dropdown-list">{projects.map((project,i) => <a key={project.number} className={activeProject===i?'selected':''} href={'#project-'+project.number} onMouseEnter={() => setActiveProject(i)} onFocus={() => setActiveProject(i)} onClick={closeMenu}><strong>{project.title}</strong><small>{project.short ?? ['AI ja automaatio','Web ja palvelumuotoilu','UX ja digitaaliset palvelut','Pelikehitys'][i]}</small></a>)}</div><div className="dropdown-preview" key={activeProject}><ProjectVisual kind={projects[activeProject].illustration}/><p>{projects[activeProject].description}</p></div></div></div>}
           </div>
+          <a className="info-nav-link" href="#minusta" onClick={closeMenu}>Info</a>
         </nav>
         <div className="header-contact">
           <a className="nav-contact" href="https://www.linkedin.com/in/matti-yli-hukka/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
