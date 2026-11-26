@@ -70,7 +70,7 @@ const projects: Project[] = [
 const stack = [
   { title: 'Kehitys', items: 'TypeScript · HTML · CSS · Python · C# · SQL · Git · GitHub · REST API · Unity · Cloudflare · React · Vite' },
   { title: 'Automaatio & AI', items: 'n8n · Power Automate · LLM · Ollama · Qwen · Docker · Freshdesk · API-integraatiot · Prompt engineering · AI-avusteinen ohjelmistokehitys · AI-agentit' },
-  { title: 'Digitaaliset palvelut', items: 'WordPress · Shopify · Figma · Adobe Creative Cloud · GIMP · UI/UX · Palvelumuotoilu · Saavutettavuus · Data-analytiikka · CRM' },
+  { title: 'Digitaalinen liiketoiminta & Design', items: 'WordPress · Shopify · Figma · Adobe Creative Cloud · GIMP · UI/UX · Palvelumuotoilu · Saavutettavuus · Data-analytiikka · CRM' },
   { title: 'Digitaalinen markkinointi', items: 'SEO · GEO · AEO · Google Analytics 4 · Google Search Console · Avainsanatutkimus · Sisältöstrategia · Konversio-optimointi (CRO)' },
 ];
 
