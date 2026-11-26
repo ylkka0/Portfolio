@@ -36,6 +36,7 @@ const projects: Project[] = [
     link: 'https://github.com/ylkka0/Portfolio/blob/main/taidekupla.fi.md',
     action: 'Projektin tiedot',
     illustration: 'taide',
+    preview: 'https://github.com/user-attachments/assets/322ee75e-afb3-4a62-ab62-b17da68679b7',
   },
   {
     number: '03',
@@ -46,6 +47,7 @@ const projects: Project[] = [
     link: 'https://github.com/ylkka0/Portfolio/blob/main/SOITE%20Digipalvelut.md',
     action: 'Projektin tiedot',
     illustration: 'soite',
+    preview: 'https://github.com/user-attachments/assets/a9aced46-303d-44be-9c2f-c180c58654f0',
   },
   {
     number: '04',
@@ -56,6 +58,7 @@ const projects: Project[] = [
     link: 'https://ylkka0.itch.io/pilkki-1999',
     action: 'Pelaa peliä',
     illustration: 'pilkki',
+    preview: 'https://github.com/user-attachments/assets/36b39f76-40e7-40ba-ba81-e6d428ddcc07',
   },
   {"number":"05","title":"Adobe Illustrator","category":"GRAAFINEN SUUNNITTELU","description":"Kokoelma Adobe Illustrator -töitä: typografiaa, kansisuunnittelua, mainoksia ja julisteita.","technologies":["Adobe Illustrator"],"link":"https://github.com/ylkka0/Portfolio/tree/main/Adobe%20Illustrator.imgs","action":"Katso kaikki työt","illustration":"illustrator","preview":"https://raw.githubusercontent.com/ylkka0/Portfolio/main/Adobe%20Illustrator.imgs/Expressiivinen%20typografia.png","short":"Graafinen suunnittelu"},
   {"number":"06","title":"Mpappa UI","category":"UI / PROTOTYYPPI","description":"Kuvitteellisen pelin käyttöliittymägrafiikkaa ja interaktiivinen Figma-prototyyppi.","technologies":["Figma","UI Design"],"link":"https://www.figma.com/proto/QtoQ1V1p8LAbF7n4c1X9dA/Mpappa?page-id=&node-id=4-6&starting-point-node-id=4%3A6&t=mQ1rwDTWHPIBbQIf-1","action":"Avaa Figma-prototyyppi","illustration":"mpappa","short":"Pelin käyttöliittymäprototyyppi"},
