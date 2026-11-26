@@ -46,14 +46,15 @@
 @media(max-width:680px){.project-dropdown{grid-template-columns:minmax(0,1fr)}}
 
 /* About portrait and personal manifesto */
-.about-grid{grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);column-gap:48px;row-gap:24px;align-items:start}
+.about-grid.container{width:min(1520px,calc(100% - 96px));grid-template-columns:minmax(0,1.28fr) minmax(0,1fr);column-gap:0;row-gap:36px;align-items:stretch}
 .about-heading{grid-column:1/-1}
 .about-heading h2{margin:0 0 12px}
-.about-profile{min-width:0}
-.about-portrait{display:block;width:100%;max-width:320px;height:auto;aspect-ratio:1122/1402;object-fit:cover;border-radius:4px}
-.about-manifesto{margin-top:24px}
-.about-manifesto h3{font:400 24px/1.2 Arial;margin:0 0 15px;color:#f3f4f5}
-.about-manifesto p{font-size:14px;line-height:1.75;color:#c5ced5;margin:0 0 12px}
-.about-text{padding-top:0}
+.about-profile{min-width:0;display:grid;grid-template-columns:minmax(0,0.9fr) minmax(0,1fr);gap:clamp(24px,2.8vw,48px);align-items:start;padding:32px clamp(28px,4.5vw,80px) 32px 0}
+.about-portrait{display:block;width:100%;max-width:400px;height:auto;aspect-ratio:1122/1402;object-fit:cover;border-radius:4px}
+.about-manifesto{min-width:0;margin:0}
+.about-manifesto h3{font:400 24px/1.2 Arial;margin:0 0 20px;color:#f3f4f5}
+.about-manifesto p{font-size:15px;line-height:1.75;color:#c5ced5;margin:0 0 14px}
+.about-text{min-width:0;border-left:1px solid #ffffff55;padding:42px 0 32px clamp(36px,7vw,116px)}
 .about-text p:first-child{margin-top:0}
-@media(max-width:680px){.about-grid{grid-template-columns:minmax(0,1fr);gap:26px}.about-heading{grid-column:auto}.about-portrait{max-width:320px}.about-manifesto{max-width:480px}}
+@media(max-width:1050px){.about-grid.container{width:calc(100% - 48px);grid-template-columns:minmax(0,1fr);gap:26px}.about-heading{grid-column:auto}.about-profile{padding:0;grid-template-columns:minmax(0,0.85fr) minmax(0,1fr);gap:30px}.about-portrait{max-width:320px}.about-text{border-left:0;border-top:1px solid #ffffff30;padding:28px 0 0}}
+@media(max-width:600px){.about-grid.container{width:calc(100% - 36px)}.about-profile{grid-template-columns:minmax(0,1fr);gap:24px}.about-manifesto{max-width:480px}}
