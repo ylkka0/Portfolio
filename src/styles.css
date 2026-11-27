@@ -105,3 +105,8 @@
 .project-page .case-section{border-top:0;padding-top:36px}
 .masadesk-case .case-intro h1{font:400 clamp(30px,4vw,44px)/1.15 Arial;letter-spacing:-1.5px;margin:0 0 16px}
 @media(max-width:680px){.project-page .case-back{width:calc(100% - 36px);padding-top:24px}.project-page .case-section{padding-top:24px}}
+
+/* Simplified centered footer */
+.site-footer{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+.site-footer>a{grid-column:2;justify-self:center}
+@media(max-width:680px){.site-footer{grid-template-columns:1fr;justify-items:center}.site-footer>a{grid-column:1}}
