@@ -87,3 +87,11 @@
 .masadesk-case .case-outcome,.masadesk-case .case-learning{border-top:1px solid #ffffff19;padding-top:26px;min-width:0}
 .masadesk-case .case-disclaimer{margin:0;grid-column:1/-1;border-top:1px solid #ffffff19;padding-top:18px}
 @media(max-width:680px){.masadesk-case.container{width:calc(100% - 36px);gap:28px}.case-flow,.case-flow-stage{gap:8px}.case-flow-stage>span:first-child{padding:9px 10px}}
+
+/* Masadesk demo media */
+.masadesk-case .case-demo{grid-column:1/-1;min-width:0;border-top:1px solid #ffffff19;padding-top:30px}
+.case-video{display:block;width:100%;height:auto;aspect-ratio:1600/694;background:#080c10;border-radius:6px}
+.case-workflow{margin:24px 0;min-width:0}
+.case-workflow a{display:block;cursor:zoom-in}
+.case-workflow img{display:block;width:100%;height:auto;border-radius:5px}
+.case-workflow figcaption{margin-top:10px;line-height:1.5}

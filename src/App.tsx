@@ -25,6 +25,7 @@ const projects: Project[] = [
     link: '#masadesk',
     action: 'Tutustu toteutukseen',
     illustration: 'masadesk',
+    preview: new URL('./images/masadesk-workflow.png', import.meta.url).href,
     featured: true,
   },
   {
@@ -187,11 +188,25 @@ function App() {
               <p>AI ei siis antanut perusteettoman korkeaa prioriteettia, vaan tunnisti tietojen riittämättömyyden.</p>
               <p className="case-caption">Esimerkin ongelmakuvaus on tiivistetty. AI:n luokittelutulos perustuu toteutuneeseen testiin. Paneeli havainnollistaa testitulosta.</p>
             </div>
+            <div className="case-demo">
+              <h3>Demovideo</h3>
+              <video className="case-video" controls playsInline preload="metadata" aria-label="Masadeskin toiminnallinen demovideo" width={1600} height={694}>
+                <source src={new URL('./images/masadesk-demo.mp4', import.meta.url).href} type="video/mp4"/>
+                Selaimesi ei tue videon toistoa.
+              </video>
+              <p className="case-caption">54 sekunnin toiminnallinen esittely.</p>
+            </div>
             <div className="case-architecture">
               <h3>Miten ratkaisu toimii?</h3>
               <div className="case-flow" aria-label="Freshdesk, n8n, Ollama ja Qwen, n8n, Freshdesk">
                 {['Freshdesk', 'n8n', 'Ollama / Qwen', 'n8n', 'Freshdesk'].map((name,i)=><div className="case-flow-stage" key={i}><span>{name}</span>{i<4&&<span className="case-flow-arrow" aria-hidden="true">→</span>}</div>)}
               </div>
+              <figure className="case-workflow">
+                <a href={new URL('./images/masadesk-workflow.png', import.meta.url).href} target="_blank" rel="noopener noreferrer" aria-label="Avaa n8n-työnkulun kuva täysikokoisena">
+                  <img src={new URL('./images/masadesk-workflow.png', import.meta.url).href} width={1647} height={359} loading="lazy" alt="Masadeskin todellinen n8n-työnkulku: tukipyyntöjen haku, AI-luokittelu, validointi, aiempien muistiinpanojen tarkistus ja yksityisen AI-muistiinpanon tallennus"/>
+                </a>
+                <figcaption className="case-caption">n8n-työnkulku. Avaa kuva täysikokoisena painamalla sitä.</figcaption>
+              </figure>
               <ol className="case-process">
                 <li>n8n hakee tukipyynnön Freshdeskin REST API:sta.</li>
                 <li>Tukipyynnön otsikko ja kuvaus välitetään Ollamassa toimivalle kielimallille.</li>
