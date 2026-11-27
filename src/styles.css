@@ -96,18 +96,12 @@
 .case-workflow img{display:block;width:100%;height:auto;border-radius:5px}
 .case-workflow figcaption{margin-top:10px;line-height:1.5}
 
-/* Compact Masadesk detail carousel */
-.masadesk-case .case-carousel{grid-column:1/-1;min-width:0;border-top:1px solid #ffffff19;padding-top:20px}
-.case-carousel-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
-.case-carousel-links,.case-carousel-arrows{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.case-carousel button{font:inherit;color:#c5ced5;background:transparent;border:1px solid transparent;border-radius:5px;cursor:pointer}
-.case-carousel-links button{padding:9px 12px;font-size:13px;white-space:nowrap}
-.case-carousel-links button.is-active{color:#fff;background:#ffffff0d;border-color:#ffffff30}
-.case-carousel button:hover{color:#fff;background:#ffffff14}
-.case-carousel-arrows{flex-wrap:nowrap;gap:10px}
-.case-carousel-arrows button{width:34px;height:34px;display:grid;place-items:center;border-color:#ffffff25}
-.case-carousel-arrows span{font-size:12px;color:#aebcc6;white-space:nowrap;font-variant-numeric:tabular-nums}
-.case-carousel-content{min-width:0}
-.masadesk-case .case-carousel-content>.case-demo,.masadesk-case .case-carousel-content>.case-architecture,.masadesk-case .case-carousel-content>.case-outcome,.masadesk-case .case-carousel-content>.case-learning{border:0;padding:0;max-width:760px;margin:0 auto}
-.case-carousel-content .case-video{width:100%;height:auto;max-height:320px;object-fit:contain}
-@media(max-width:680px){.case-carousel-nav{gap:12px;margin-bottom:18px}.case-carousel-links{gap:4px}.case-carousel-links button{padding:8px 9px}.case-carousel-arrows{margin-left:auto}.case-carousel-content .case-video{max-height:none}}
+
+/* Dedicated Masadesk project page */
+.project-page .site-header{position:relative;background:#10171d;border-bottom:1px solid #ffffff12}
+.project-page .case-back{width:min(1050px,calc(100% - 48px));padding-top:36px}
+.case-back a{font-size:14px;color:#c5ced5}
+.case-back a:hover{color:white}
+.project-page .case-section{border-top:0;padding-top:36px}
+.masadesk-case .case-intro h1{font:400 clamp(30px,4vw,44px)/1.15 Arial;letter-spacing:-1.5px;margin:0 0 16px}
+@media(max-width:680px){.project-page .case-back{width:calc(100% - 36px);padding-top:24px}.project-page .case-section{padding-top:24px}}
