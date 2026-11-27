@@ -21,7 +21,7 @@ const projects: Project[] = [
     title: 'Masadesk',
     category: 'AI / AUTOMAATIO / API',
     description: 'Proof of concept IT-tukipyyntöjen luokitteluun. Freshdesk, n8n ja paikallinen Ollama-kielimalli muodostavat perustellun AI-ehdotuksen tukihenkilön tarkistettavaksi.',
-    technologies: ['n8n', 'Freshdesk API', 'Ollama', 'Docker', 'JavaScript'],
+    technologies: ['n8n', 'Ollama', 'Qwen', 'Freshdesk API', 'Docker', 'JavaScript'],
     link: '#masadesk',
     action: 'Tutustu toteutukseen',
     illustration: 'masadesk',
@@ -113,7 +113,6 @@ function ProjectVisual({ kind }: { kind: string }) {
 }
 
 function App() {
-  const [detailsOpen, setDetailsOpen] = useState(false);
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
   const closeMenu = () => setProjectsOpen(false);
@@ -162,27 +161,57 @@ function App() {
         </section>
 
         <section id="masadesk" className="section case-section">
-          <div className="container case-layout">
+          <div className="container case-layout masadesk-case">
             <div className="case-intro">
-              <span className="eyebrow"><span className="eyebrow-line" /> CASE STUDY / MASADESK</span>
-              <h2>Paikallinen AI.<br /><span>Älykkäämpi IT-tuki.</span></h2>
-              <p>Masadesk on proof of concept, jossa yhdistin Freshdesk-tukijärjestelmän, n8n-työnkulkuautomaation ja Ollaman kautta paikallisesti ajettavan Qwen-kielimallin.</p>
-              <p>Ratkaisu luokittelee tukipyynnön, ehdottaa prioriteettia ja kirjoittaa perustelun yksityiseksi muistiinpanoksi. Tukihenkilö säilyttää päätösvastuun.</p>
-              <button className="outline-action" onClick={() => setDetailsOpen(!detailsOpen)} aria-expanded={detailsOpen} aria-controls="masadesk-details">{detailsOpen ? 'Piilota toteutuksen vaiheet' : 'Näytä toteutuksen vaiheet'} <ChevronDown className={detailsOpen ? 'rotated' : ''} size={16}/></button>
+              <h2>Masadesk — AI-avusteinen IT-tukipalvelu</h2>
+              <p>Paikalliseen tekoälyyn perustuva tukipyyntöjen luokitteludemo.</p>
+              <p className="case-technologies">n8n · Ollama · Qwen · Freshdesk API · Docker · JavaScript</p>
+              <h3>Projektin tavoite</h3>
+              <p>Voisiko paikallisesti toimiva tekoäly helpottaa IT-tukipyyntöjen käsittelyä?</p>
+              <p>Rakensin tätä varten Masadesk-demon, jossa n8n yhdistää Freshdesk-tukipalvelujärjestelmän paikallisesti ajettavaan Qwen-kielimalliin Ollaman kautta.</p>
+              <p>Tavoitteena oli automatisoida tukipyyntöjen alustava luokittelu säilyttäen lopullinen päätöksenteko ihmisellä.</p>
             </div>
-            <div className="case-panel">
-              <div className="case-panel-head"><span><span className="status-dot"/> AI CLASSIFICATION SUGGESTION</span><span>DEMO / 001</span></div>
-              <div className="case-panel-body"><span className="terminal-label">TICKET #5</span><p className="panel-subtitle">VPN-yhteys ei toimi</p><div className="case-row"><span>Suggested type</span><strong>Incident</strong></div><div className="case-row"><span>Suggested priority</span><strong>Undetermined</strong></div><div className="case-reason"><span>REASON</span><p>Tukipyynnön vaikutuksista ei ole riittävästi tietoa prioriteetin varmaan arviointiin.</p></div><div className="case-footer"><Check size={15}/> PENDING HUMAN REVIEW</div></div>
+            <div className="case-example">
+              <h3>Konkreettinen esimerkki</h3>
+              <div className="case-panel">
+                <div className="case-panel-head"><span><span className="status-dot"/> AI CLASSIFICATION SUGGESTION</span><span>DEMO</span></div>
+                <div className="case-panel-body">
+                  <span className="terminal-label">TESTITILANNE</span>
+                  <p className="panel-subtitle">VPN-yhteyden toimintahäiriö</p>
+                  <div className="case-row"><span>Tyyppi</span><strong>Incident</strong></div>
+                  <div className="case-row"><span>Prioriteetti</span><strong>Undetermined</strong></div>
+                  <div className="case-reason"><span>PERUSTELU</span><p>Tukipyynnön tiedoista ei voida riittävän varmasti päätellä häiriön liiketoimintavaikutuksia tai kiireellisyyttä.</p></div>
+                  <div className="case-footer"><Check size={15}/> PENDING HUMAN REVIEW</div>
+                </div>
+              </div>
+              <p>AI ei siis antanut perusteettoman korkeaa prioriteettia, vaan tunnisti tietojen riittämättömyyden.</p>
+              <p className="case-caption">Esimerkin ongelmakuvaus on tiivistetty. AI:n luokittelutulos perustuu toteutuneeseen testiin. Paneeli havainnollistaa testitulosta.</p>
             </div>
-            {detailsOpen && <div className="case-details" id="masadesk-details">
-              {[
-                ['01', 'Tukipyyntö Freshdeskistä', 'n8n hakee tukipyynnön Freshdesk API:n kautta.'],
-                ['02', 'Paikallinen kielimalli', 'Ollama välittää tiketin Qwen-mallille.'],
-                ['03', 'Tuloksen validointi', 'Luokittelun tyyppi, prioriteetti ja perustelu tarkistetaan.'],
-                ['04', 'Yksityinen AI-muistiinpano', 'Tuloksesta muodostetaan tarkistettava ehdotus Freshdeskiin.']
-              ].map(([number,title,detail]) => <div className="case-step" key={number}><span>{number}</span><div><strong>{title}</strong><p>{detail}</p></div></div>)}
-              <p className="case-disclaimer">Toteutettu ja testattu teknisenä demona. Ei tuotantovalmis automaatio tai automaattinen päätöksentekojärjestelmä.</p>
-            </div>}
+            <div className="case-architecture">
+              <h3>Miten ratkaisu toimii?</h3>
+              <div className="case-flow" aria-label="Freshdesk, n8n, Ollama ja Qwen, n8n, Freshdesk">
+                {['Freshdesk', 'n8n', 'Ollama / Qwen', 'n8n', 'Freshdesk'].map((name,i)=><div className="case-flow-stage" key={i}><span>{name}</span>{i<4&&<span className="case-flow-arrow" aria-hidden="true">→</span>}</div>)}
+              </div>
+              <ol className="case-process">
+                <li>n8n hakee tukipyynnön Freshdeskin REST API:sta.</li>
+                <li>Tukipyynnön otsikko ja kuvaus välitetään Ollamassa toimivalle kielimallille.</li>
+                <li>Tekoäly ehdottaa tukipyynnön tyyppiä ja prioriteettia sekä perustelee valintansa.</li>
+                <li>n8n validoi vastauksen ja tarkistaa aiemmat AI-muistiinpanot.</li>
+                <li>Luokitteluehdotus voidaan tallentaa Freshdeskiin yksityisenä muistiinpanona tukihenkilön tarkistettavaksi.</li>
+              </ol>
+            </div>
+            <div className="case-outcome">
+              <h3>Lopputulos</h3>
+              <p>Toteutin toimivan proof of conceptin, jossa paikallinen kielimalli analysoi Freshdesk-tukipyynnön ja luokitteluehdotus tallennettiin onnistuneesti yksityiseksi muistiinpanoksi.</p>
+              <p>Lisäksi testasin ajastettua tikettihakua, vastausten validointia ja duplikaattimuistiinpanojen tunnistusta.</p>
+              <p>Projekti osoittaa, miten olemassa olevia järjestelmiä voidaan yhdistää paikalliseen tekoälyyn kevyellä automaatioratkaisulla.</p>
+            </div>
+            <div className="case-learning">
+              <h3>Mitä opin?</h3>
+              <p>Projektissa kehitin osaamistani REST API -integraatioissa, n8n-työnkuluissa, Docker-ympäristöissä ja paikallisten kielimallien hyödyntämisessä.</p>
+              <p>Keskeinen oppi oli, että toimiva AI-integraatio vaatii kielimallin lisäksi huolellista tiedonkäsittelyä, vastausten validointia ja virhetilanteiden huomioimista.</p>
+            </div>
+            <p className="case-disclaimer">Projektin rajaus: Tekninen proof of concept. Tuotantokäyttöä tai mitattuja ajansäästöjä ei ole osoitettu.</p>
           </div>
         </section>
 

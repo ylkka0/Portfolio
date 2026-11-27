@@ -69,3 +69,21 @@
 .site-header .nav{gap:24px}
 .site-header .nav .info-nav-link{padding:12px 0;white-space:nowrap}
 @media(max-width:680px){.site-header .nav{gap:12px}}
+
+/* Masadesk portfolio case */
+.masadesk-case.container{width:min(1050px,calc(100% - 48px));gap:36px 48px;align-items:start}
+.masadesk-case .case-intro h2{margin:0 0 16px}
+.masadesk-case h3{font:400 23px/1.25 Arial;margin:0 0 16px;color:#f3f4f5}
+.masadesk-case p,.masadesk-case li{font-size:15px;line-height:1.8;color:#c5ced5}
+.masadesk-case .case-technologies{font-size:13px;margin:0 0 28px;color:#aebcc6}
+.masadesk-case .case-caption,.masadesk-case .case-disclaimer{font-size:12px;color:#aebcc6}
+.masadesk-case .case-architecture{grid-column:1/-1;border-top:1px solid #ffffff19;padding-top:30px;min-width:0}
+.case-flow{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:20px 0 24px}
+.case-flow-stage{display:flex;align-items:center;gap:12px;font-size:13px}
+.case-flow-stage>span:first-child{padding:12px 16px;border:1px solid #ffffff25;border-radius:5px;background:#1a252e;color:#e7edf2}
+.case-flow-arrow{color:#aebcc6}
+.case-process{padding-left:20px;margin:0}
+.case-process li{padding-left:5px;margin-bottom:8px}
+.masadesk-case .case-outcome,.masadesk-case .case-learning{border-top:1px solid #ffffff19;padding-top:26px;min-width:0}
+.masadesk-case .case-disclaimer{margin:0;grid-column:1/-1;border-top:1px solid #ffffff19;padding-top:18px}
+@media(max-width:680px){.masadesk-case.container{width:calc(100% - 36px);gap:28px}.case-flow,.case-flow-stage{gap:8px}.case-flow-stage>span:first-child{padding:9px 10px}}
