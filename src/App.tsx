@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowDown, ArrowUpRight, Braces, Check, ChevronDown, Code2, Github, Layers3, Mail, Workflow } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Braces, Check, ChevronDown, ChevronLeft, ChevronRight, Code2, Github, Layers3, Mail, Workflow } from 'lucide-react';
 
 type Project = {
   number: string;
@@ -116,6 +116,8 @@ function ProjectVisual({ kind }: { kind: string }) {
 function App() {
   const [projectsOpen, setProjectsOpen] = useState(false);
   const [activeProject, setActiveProject] = useState(0);
+  const [caseSlide, setCaseSlide] = useState(0);
+  const caseSlides = ['Demovideo', 'Miten ratkaisu toimii?', 'Lopputulos', 'Mitä opin?'];
   const closeMenu = () => setProjectsOpen(false);
   return (
     <div className="site">
@@ -188,6 +190,19 @@ function App() {
               <p>AI ei siis antanut perusteettoman korkeaa prioriteettia, vaan tunnisti tietojen riittämättömyyden.</p>
               <p className="case-caption">Esimerkin ongelmakuvaus on tiivistetty. AI:n luokittelutulos perustuu toteutuneeseen testiin. Paneeli havainnollistaa testitulosta.</p>
             </div>
+            <section className="case-carousel" aria-label="Masadeskin lisätiedot" aria-roledescription="karuselli">
+              <div className="case-carousel-nav">
+                <div className="case-carousel-links" role="group" aria-label="Valitse sisältö">
+                  {caseSlides.map((label,i)=><button type="button" key={label} aria-pressed={caseSlide === i} className={caseSlide === i ? 'is-active' : ''} onClick={()=>setCaseSlide(i)}>{label}</button>)}
+                </div>
+                <div className="case-carousel-arrows">
+                  <button type="button" aria-label="Edellinen sisältö" onClick={()=>setCaseSlide(i=>(i+caseSlides.length-1)%caseSlides.length)}><ChevronLeft size={19}/></button>
+                  <span aria-live="polite" aria-atomic="true">{caseSlide+1} / {caseSlides.length}</span>
+                  <button type="button" aria-label="Seuraava sisältö" onClick={()=>setCaseSlide(i=>(i+1)%caseSlides.length)}><ChevronRight size={19}/></button>
+                </div>
+              </div>
+              <div className="case-carousel-content" role="group" aria-label={caseSlides[caseSlide]} aria-roledescription="dia">
+              {caseSlide === 0 && (
             <div className="case-demo">
               <h3>Demovideo</h3>
               <video className="case-video" controls playsInline preload="metadata" aria-label="Masadeskin toiminnallinen demovideo" width={1600} height={694}>
@@ -196,6 +211,8 @@ function App() {
               </video>
               <p className="case-caption">54 sekunnin toiminnallinen esittely.</p>
             </div>
+              )}
+              {caseSlide === 1 && (
             <div className="case-architecture">
               <h3>Miten ratkaisu toimii?</h3>
               <div className="case-flow" aria-label="Freshdesk, n8n, Ollama ja Qwen, n8n, Freshdesk">
@@ -215,17 +232,24 @@ function App() {
                 <li>Luokitteluehdotus voidaan tallentaa Freshdeskiin yksityisenä muistiinpanona tukihenkilön tarkistettavaksi.</li>
               </ol>
             </div>
+              )}
+              {caseSlide === 2 && (
             <div className="case-outcome">
               <h3>Lopputulos</h3>
               <p>Toteutin toimivan proof of conceptin, jossa paikallinen kielimalli analysoi Freshdesk-tukipyynnön ja luokitteluehdotus tallennettiin onnistuneesti yksityiseksi muistiinpanoksi.</p>
               <p>Lisäksi testasin ajastettua tikettihakua, vastausten validointia ja duplikaattimuistiinpanojen tunnistusta.</p>
               <p>Projekti osoittaa, miten olemassa olevia järjestelmiä voidaan yhdistää paikalliseen tekoälyyn kevyellä automaatioratkaisulla.</p>
             </div>
+              )}
+              {caseSlide === 3 && (
             <div className="case-learning">
               <h3>Mitä opin?</h3>
               <p>Projektissa kehitin osaamistani REST API -integraatioissa, n8n-työnkuluissa, Docker-ympäristöissä ja paikallisten kielimallien hyödyntämisessä.</p>
               <p>Keskeinen oppi oli, että toimiva AI-integraatio vaatii kielimallin lisäksi huolellista tiedonkäsittelyä, vastausten validointia ja virhetilanteiden huomioimista.</p>
             </div>
+              )}
+              </div>
+            </section>
             <p className="case-disclaimer">Projektin rajaus: Tekninen proof of concept. Tuotantokäyttöä tai mitattuja ajansäästöjä ei ole osoitettu.</p>
           </div>
         </section>
